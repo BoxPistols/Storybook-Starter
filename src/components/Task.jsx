@@ -1,13 +1,14 @@
+import PropTypes from 'prop-types';
+
 export default function Task({ task: { id, title, state } }) {
   return (
     <div className={`list-item ${state}`}>
-      <label className="checkbox" htmlFor={id}>
+      <label className="checkbox" htmlFor="checked">
         <input
           type="checkbox"
-          id={id}
+          id={`archiveTask-${id}`}
           name="checked"
-          defaultChecked={state === 'TASK_PINNED'}
-          readOnly={true}
+        // defaultChecked={state === 'TASK_PINNED'}
         />
         <span className="checkbox-custom" />
       </label>
@@ -20,6 +21,28 @@ export default function Task({ task: { id, title, state } }) {
           placeholder="Input title"
         />
       </label>
-    </div>
+
+      {state !== 'TASK_ARCHIVED' && (
+        <button className="pin-button" type="button" id={`pinTask-${id}`}>
+          <span className="icon-star" />
+        </button>
+      )}
+    </div >
   );
 }
+
+
+Task.propTypes = {
+  task: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    state: PropTypes.oneOf(['TASK_INBOX', 'TASK_PINNED', 'TASK_ARCHIVED']).isRequired,
+  }).isRequired,
+};
+Task.defaultProps = {
+  task: {
+    id: '1',
+    title: 'Task 1',
+    state: 'TASK_INBOX',
+  },
+};
