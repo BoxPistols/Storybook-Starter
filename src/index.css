@@ -64,6 +64,7 @@ input[type="submit"] {
 }
 
 @keyframes glow {
+
   0%,
   100% {
     opacity: 1;
@@ -78,24 +79,21 @@ input[type="submit"] {
   font-family: "Nunito Sans";
   font-style: italic;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe0oMImSLYBIv1o4X1M8cce4E9lKcw.ttf)
-    format("truetype");
+  src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe0oMImSLYBIv1o4X1M8cce4E9lKcw.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe0qMImSLYBIv1o4X1M8cce9I94.ttf)
-    format("truetype");
+  src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe0qMImSLYBIv1o4X1M8cce9I94.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 800;
-  src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe03MImSLYBIv1o4X1M8cc8aBc5tU1Q.ttf)
-    format("truetype");
+  src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe03MImSLYBIv1o4X1M8cc8aBc5tU1Q.ttf) format("truetype");
 }
 
 .type-light {
@@ -144,7 +142,7 @@ textarea {
   visibility: hidden;
 }
 
-.checkbox input[type="checkbox"] + span:before {
+.checkbox input[type="checkbox"]+span:before {
   position: absolute;
   top: 50%;
   right: auto;
@@ -159,7 +157,7 @@ textarea {
   display: block;
 }
 
-.checkbox input[type="checkbox"]:checked + span:before {
+.checkbox input[type="checkbox"]:checked+span:before {
   font-size: 16px;
   line-height: 24px;
   box-shadow: none;
@@ -198,8 +196,8 @@ textarea {
   width: 100%;
 }
 
-.input-symbol input:focus + [class^="icon-"],
-.input-symbol input:focus + [class*=" icon-"] {
+.input-symbol input:focus+[class^="icon-"],
+.input-symbol input:focus+[class*=" icon-"] {
   color: #2cc5d2;
 }
 
@@ -219,8 +217,7 @@ textarea {
 @font-face {
   font-family: "percolate";
   src: url("./assets/icon/percolate.eot?-5w3um4");
-  src: url("./assets/icon/percolate.eot?#iefix5w3um4")
-      format("embedded-opentype"),
+  src: url("./assets/icon/percolate.eot?#iefix5w3um4") format("embedded-opentype"),
     url("./assets/icon/percolate.woff?5w3um4") format("woff"),
     url("./assets/icon/percolate.ttf?5w3um4") format("truetype"),
     url("./assets/icon/percolate.svg?5w3um4") format("svg");
@@ -314,6 +311,7 @@ textarea {
 .pin-button:hover {
   color: #2cc5d2;
 }
+
 .pin-button:focus {
   outline-color: transparent;
 }
@@ -327,7 +325,8 @@ textarea {
 }
 
 .list-item.TASK_ARCHIVED input[type="text"] {
-  color: #a0aec0;
+  /* color: #a0aec0; */
+  color: #4a5b77;
   text-decoration: line-through;
 }
 
@@ -339,7 +338,7 @@ textarea {
   cursor: pointer;
 }
 
-.list-item + .list-item {
+.list-item+.list-item {
   border-top: 1px solid #f0f9fb;
 }
 
@@ -377,7 +376,7 @@ textarea {
   height: 12px;
 }
 
-.loading-item + .loading-item {
+.loading-item+.loading-item {
   border-top: 1px solid #f0f9fb;
 }
 

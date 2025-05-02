@@ -8,7 +8,7 @@ export default function Task({ task: { id, title, state } }) {
           type='checkbox'
           id={`archiveTask-${id}`}
           aria-label='アーカイブ'
-          // defaultChecked={state === 'TASK_PINNED'}
+          defaultChecked={state === 'TASK_ARCHIVED'}
         />
         <span className='checkbox-custom' />
       </label>
