@@ -1,48 +1,54 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 export default function Task({ task: { id, title, state } }) {
   return (
     <div className={`list-item ${state}`}>
-      <label className="checkbox" htmlFor="checked">
+      <label className='checkbox' htmlFor={`archiveTask-${id}`}>
         <input
-          type="checkbox"
+          type='checkbox'
           id={`archiveTask-${id}`}
-          name="checked"
-        // defaultChecked={state === 'TASK_PINNED'}
+          aria-label='アーカイブ'
+          // defaultChecked={state === 'TASK_PINNED'}
         />
-        <span className="checkbox-custom" />
+        <span className='checkbox-custom' />
       </label>
-      <label className="title" htmklFor={title}>
+      <label className='title' htmlFor={`titleTask-${id}`}>
         <input
-          type="text"
+          type='text'
+          id={`titleTask-${id}`}
           value={title}
           readOnly={true}
-          name="title"
-          placeholder="Input title"
+          placeholder='Input title'
+          aria-label='タスクタイトル'
         />
       </label>
 
       {state !== 'TASK_ARCHIVED' && (
-        <button className="pin-button" type="button" id={`pinTask-${id}`}>
-          <span className="icon-star" />
+        <button
+          className='pin-button'
+          type='button'
+          id={`pinTask-${id}`}
+          aria-label='ピン留め'
+        >
+          <span className='icon-star' />
         </button>
       )}
-    </div >
-  );
+    </div>
+  )
 }
-
 
 Task.propTypes = {
   task: PropTypes.shape({
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    state: PropTypes.oneOf(['TASK_INBOX', 'TASK_PINNED', 'TASK_ARCHIVED']).isRequired,
+    state: PropTypes.oneOf(['TASK_INBOX', 'TASK_PINNED', 'TASK_ARCHIVED'])
+      .isRequired,
   }).isRequired,
-};
+}
 Task.defaultProps = {
   task: {
     id: '1',
     title: 'Task 1',
     state: 'TASK_INBOX',
   },
-};
+}
