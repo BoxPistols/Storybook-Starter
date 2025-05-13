@@ -1117,6 +1117,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/addon-a11y@npm:^8.6.12":
+  version: 8.6.12
+  resolution: "@storybook/addon-a11y@npm:8.6.12"
+  dependencies:
+    "@storybook/addon-highlight": "npm:8.6.12"
+    "@storybook/global": "npm:^5.0.0"
+    "@storybook/test": "npm:8.6.12"
+    axe-core: "npm:^4.2.0"
+  peerDependencies:
+    storybook: ^8.6.12
+  checksum: 10c0/a45b43cce50523f595e33de9b3530c4365777cabd592d2d0631e876c98cbf065f587fa639f36751b91184727803158a611fc702a65bec1f2f153ac904d47c8e4
+  languageName: node
+  linkType: hard
+
 "@storybook/addon-actions@npm:8.6.12":
   version: 8.6.12
   resolution: "@storybook/addon-actions@npm:8.6.12"
@@ -2096,6 +2110,13 @@ __metadata:
   dependencies:
     possible-typed-array-names: "npm:^1.0.0"
   checksum: 10c0/d07226ef4f87daa01bd0fe80f8f310982e345f372926da2e5296aecc25c41cab440916bbaa4c5e1034b453af3392f67df5961124e4b586df1e99793a1374bdb2
+  languageName: node
+  linkType: hard
+
+"axe-core@npm:^4.2.0":
+  version: 4.10.3
+  resolution: "axe-core@npm:4.10.3"
+  checksum: 10c0/1b1c24f435b2ffe89d76eca0001cbfff42dbf012ad9bd37398b70b11f0d614281a38a28bc3069e8972e3c90ec929a8937994bd24b0ebcbaab87b8d1e241ab0c7
   languageName: node
   linkType: hard
 
@@ -3747,6 +3768,7 @@ __metadata:
   resolution: "intro-storybook-react-template@workspace:."
   dependencies:
     "@eslint/js": "npm:^9.9.0"
+    "@storybook/addon-a11y": "npm:^8.6.12"
     "@storybook/addon-essentials": "npm:^8.6.12"
     "@storybook/addon-interactions": "npm:^8.6.12"
     "@storybook/addon-links": "npm:^8.6.12"
