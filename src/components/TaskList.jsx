@@ -43,3 +43,13 @@ export default function TaskList({loading, tasks}) {
     </div>
   );
 }
+
+// type
+TaskList.propTypes = {
+  loading: PropTypes.bool,
+  tasks: PropTypes.arrayOf(Task.propTypes.task).isRequired,
+};
+TaskList.defaultProps = {
+  loading: false,
+  tasks: [],
+};
