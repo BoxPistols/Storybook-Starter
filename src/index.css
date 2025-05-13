@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -8,17 +7,16 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-size: 100%;
-  outline: none;
   font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: 400;
-  color: #333;
+  font-weight: 400;
   font-size: 16px;
+  color: #333;
   background-color: #26c6da;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  outline: none;
 }
 
 h1,
@@ -30,13 +28,9 @@ label {
   font-weight: normal;
   font-style: normal;
   font-size: 100%;
-  line-height: 1;
-  font-family: inherit;
-  vertical-align: baseline;
   vertical-align: middle;
   line-height: normal;
   overflow: visible;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 button::-moz-focus-inner,
@@ -64,6 +58,7 @@ input[type="submit"] {
 }
 
 @keyframes glow {
+
   0%,
   100% {
     opacity: 1;
@@ -78,24 +73,21 @@ input[type="submit"] {
   font-family: "Nunito Sans";
   font-style: italic;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe0oMImSLYBIv1o4X1M8cce4E9lKcw.ttf)
-    format("truetype");
+  src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe0oMImSLYBIv1o4X1M8cce4E9lKcw.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe0qMImSLYBIv1o4X1M8cce9I94.ttf)
-    format("truetype");
+  src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe0qMImSLYBIv1o4X1M8cce9I94.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 800;
-  src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe03MImSLYBIv1o4X1M8cc8aBc5tU1Q.ttf)
-    format("truetype");
+  src: url(https://fonts.gstatic.com/s/nunitosans/v6/pe03MImSLYBIv1o4X1M8cc8aBc5tU1Q.ttf) format("truetype");
 }
 
 .type-light {
@@ -119,16 +111,13 @@ input[type="email"],
 input[type="password"],
 textarea {
   font-size: 14px;
-  line-height: 20px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: 400;
-  padding: 0.75rem 0;
   line-height: 1.5rem !important;
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  padding: 0.75rem 0;
   border: none;
   border-radius: 0;
   box-sizing: border-box;
-  color: #333;
-  outline: none;
 }
 
 .checkbox {
@@ -144,11 +133,9 @@ textarea {
   visibility: hidden;
 }
 
-.checkbox input[type="checkbox"] + span:before {
+.checkbox input[type="checkbox"]+span:before {
   position: absolute;
   top: 50%;
-  right: auto;
-  bottom: auto;
   left: 50%;
   width: 0.85em;
   height: 0.85em;
@@ -159,19 +146,13 @@ textarea {
   display: block;
 }
 
-.checkbox input[type="checkbox"]:checked + span:before {
+.checkbox input[type="checkbox"]:checked+span:before {
   font-size: 16px;
   line-height: 24px;
   box-shadow: none;
   color: #2cc5d2;
   margin-top: -1px;
   font-family: "percolate";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
   content: "\e65e";
 }
 
@@ -192,14 +173,11 @@ textarea {
 
 .input-symbol input {
   padding-left: 3em;
-}
-
-.input-symbol input {
   width: 100%;
 }
 
-.input-symbol input:focus + [class^="icon-"],
-.input-symbol input:focus + [class*=" icon-"] {
+.input-symbol input:focus+[class^="icon-"],
+.input-symbol input:focus+[class*=" icon-"] {
   color: #2cc5d2;
 }
 
@@ -219,8 +197,7 @@ textarea {
 @font-face {
   font-family: "percolate";
   src: url("./assets/icon/percolate.eot?-5w3um4");
-  src: url("./assets/icon/percolate.eot?#iefix5w3um4")
-      format("embedded-opentype"),
+  src: url("./assets/icon/percolate.eot?#iefix5w3um4") format("embedded-opentype"),
     url("./assets/icon/percolate.woff?5w3um4") format("woff"),
     url("./assets/icon/percolate.ttf?5w3um4") format("truetype"),
     url("./assets/icon/percolate.svg?5w3um4") format("svg");
@@ -231,7 +208,6 @@ textarea {
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: "percolate";
-
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -271,6 +247,11 @@ textarea {
   margin-right: 4px;
 }
 
+.list-items {
+  min-width: 80vw;
+
+}
+
 .list-item {
   font-size: 14px;
   line-height: 20px;
@@ -298,6 +279,12 @@ textarea {
   cursor: text;
 }
 
+.no-tasks {
+  padding: 1rem;
+  color: #aaa;
+}
+
+
 .pin-button {
   width: 3rem;
   height: 3rem;
@@ -308,12 +295,12 @@ textarea {
   color: #eee;
   font-size: 16px;
   line-height: 3rem;
-  outline: none;
 }
 
 .pin-button:hover {
   color: #2cc5d2;
 }
+
 .pin-button:focus {
   outline-color: transparent;
 }
@@ -339,7 +326,7 @@ textarea {
   cursor: pointer;
 }
 
-.list-item + .list-item {
+.list-item+.list-item {
   border-top: 1px solid #f0f9fb;
 }
 
@@ -377,14 +364,13 @@ textarea {
   height: 12px;
 }
 
-.loading-item + .loading-item {
+.loading-item+.loading-item {
   border-top: 1px solid #f0f9fb;
 }
 
 .list-items {
   position: relative;
   background: white;
-  min-height: 288px;
 }
 
 .list-items .select-placeholder {
@@ -402,6 +388,8 @@ textarea {
   height: auto;
   transform: translate3d(0, -50%, 0);
   text-align: center;
+  background-color: #fff;
+  padding: 4%;
 }
 
 .wrapper-message [class^="icon-"],
@@ -445,7 +433,6 @@ textarea {
 
 .page.lists-show nav .title-page {
   font-size: 20px;
-  line-height: 24px;
   line-height: 2rem;
   cursor: pointer;
   white-space: nowrap;

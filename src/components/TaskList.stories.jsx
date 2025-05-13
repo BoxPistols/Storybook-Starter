@@ -8,7 +8,7 @@ export default {
   decoderators: [
     (Story) => {
       return (
-        <div style={{padding: "2rem"}}>
+        <div style={{padding: "1rem"}}>
           <Story />
         </div>
       );
