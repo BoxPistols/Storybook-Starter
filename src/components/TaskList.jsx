@@ -1,5 +1,6 @@
 // TaskList.jsx
 import Task from "./Task";
+import PropTypes from "prop-types";
 
 export default function TaskList({loading, tasks}) {
   const LoadingRow = () => {
